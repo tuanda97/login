@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        label.filebutton {
+            width: 120px;
+            height: 40px;
+            overflow: hidden;
+            position: relative;
+            background-color: #ccc;
+        }
+        label span input {
+            z-index: 999;
+            line-height: 0;
+            font-size: 50px;
+            position: absolute;
+            top: -2px;
+            left: -700px;
+            opacity: 0;
+            filter: alpha(opacity = 0);
+            -ms-filter: "alpha(opacity=0)";
+            cursor: pointer;
+            _cursor: hand;
+            margin: 0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+{#    <label class="filebutton">#}
+{#    Browse For File!#}
+{#    <span><input type="file" id="myfile" name="myfile"></span>#}
+{#    </label>#}
+    <label class="filebutton">
+        <i class="fa fa-address-book-o"></i>
+    <span><input type="file" id="myfile" name="myfile"></span>
+    </label>
+</form>
+</body>
+</html>

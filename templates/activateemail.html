@@ -1,0 +1,6 @@
+{##noi dung cua email xac thuc##}
+{% autoescape off %}
+Ban dang ki thanh cong
+xac nhan thong tn duoi day
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}

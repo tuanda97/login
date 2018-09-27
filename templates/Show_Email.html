@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+{#    <style>#}
+{#        body {#}
+{#            margin: 0 auto;#}
+{#            max-width: 100%;#}
+{#            padding: 0 20px;#}
+{#        }#}
+{##}
+{#        .container {#}
+{#            border: 2px solid #dedede;#}
+{#            background-color: #f1f1f1;#}
+{#            border-radius: 5px;#}
+{#            padding: 10px;#}
+{#            margin: 10px 0;#}
+{#        }#}
+{##}
+{#        .darker {#}
+{#            border-color: #ccc;#}
+{#            background-color: #ddd;#}
+{#        }#}
+{##}
+{#        .darkers {#}
+{#            border-color: #ccc;#}
+{#            background-color: #f9f9f9;#}
+{#        }#}
+{##}
+{#        .container::after {#}
+{#            content: "";#}
+{#            clear: both;#}
+{#            display: table;#}
+{#        }#}
+{##}
+{#        .container a {#}
+{#            float: left;#}
+{#            max-width: 60px;#}
+{#            width: 100%;#}
+{#            margin-right: 20px;#}
+{#            border-radius: 50%;#}
+{#        }#}
+{##}
+{#        .container img {#}
+{#            float: left;#}
+{#            max-width: 60px;#}
+{#            width: 60%;#}
+{#            margin-right: 20px;#}
+{#            border-radius: 50%;#}
+{#        }#}
+{##}
+{#        .container img.right {#}
+{#            float: right;#}
+{#            margin-left: 20px;#}
+{#            margin-right:0;#}
+{#        }#}
+{##}
+{#        .time-right {#}
+{#            float: right;#}
+{#            color: #ac2925;#}
+{#        }#}
+{##}
+{#        .time-left {#}
+{#            float: left;#}
+{#            color: #999;#}
+{#        }#}
+{#    </style>#}
+</head>
+<body>
+    <form id="null" action="?ui=html&amp;zy=s" method="post">
+        <input type="hidden" name="at" value="AF6bupMHBYZtQ7egs4Be773sXp5z-xyvkQ">
+        <input type="submit" value="Chế độ xem HTML cơ bản" class="submit_as_link" style="color:white;">
+    </form>
+    <form method="post">
+        {% csrf_token %}
+        {% for data in data %}
+    <div>
+        <input style="width: 100%;padding: 20px;border:1px solid green" type="submit" class="container darker" id="{{ data.id }}" name="{{ data.id }}"
+               value="{{ data.Emailsent }}               <{{ data.content }}>"
+               title="{{ data.content }}"><br>
+    </div>
+{#            <table>#}
+{#                <tr><td><a style="width: 300px"><h4>{{ data.Emailsent }}</h4></a></td></tr>#}
+{#                <tr>#}
+    {#                            <td><a style="width: 300px"><h4>{{ data.Emailsent }}</h4></a></td>#}
+    {#                            <td><img src="{% static '/image/logo/HUST.png' %}" alt="Avatar" class="right" style="width:100%;"></td>#}
+{#                    <td><a></a></td>#}
+{#                    <td><a></a></td>#}
+{#                    <td>#}
+{#                        <p><h4 style="color: #101010">{{ data.subject }}:</h4></p>#}
+{#                        <p style="color: #333333">{{ data.content }}</p>#}
+{#                    </td>#}
+{#                </tr><button class="time-right" type="submit" style="color:#333333;background-color: #ddd">X</button>#}
+{#            </table>#}
+{#            <span class="time-left">{{ data.date }}</span>#}
+{#        </input>#}
+        {% endfor %}
+    </form>
+</body>
+</html>
+

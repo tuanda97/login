@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <div id="table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <!-- th là thẻ của header trong bảng-->
+                    <th><input type="checkbox" name="checkall" id="chkH" >Chọn tất cả</th>
+                    <th>MA SAN PHAM</th>
+                    <th>TEN SAN PHAM</th>
+                    <th>GIA SAN PHAM</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in data %}
+                <tr>
+
+    {#              <td><a href="{% url 'edit' a.id %}">{{ a.id }}</a></td>#}
+                    <td><input ID="{{ data.id }}" type="checkbox" name="{{ data.id }}"></td>
+                    <td>{{ data.masp }}</td>
+                    <td>{{ data.tensp }}</td>
+                    <td>{{ data.gia }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <div style="margin-left: 220px">
+        <button type="submit" name="add">Them san pham</button>
+        <button type="submit" name="edit">Edit</button>
+        <button type="submit" name="delete">DELETE</button>
+    </div></div>
+</form>
+</body>
+</html>

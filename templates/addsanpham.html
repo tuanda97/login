@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+<form method="post">
+    {% csrf_token %}
+    <br>Tên hàng hóa<br>
+    MA SAN PHAM
+    <input type="text" name="masp" value="{{ data1.masp }}" required><br>
+    TEN SAN PHAM
+    <input type="text" name="tensp" value="{{ data1.tensp }}" required><br>
+    GAI SAN PHAM
+    <input type="text" name="gia" value="{{ data1.gia }}" required><br>
+    <button type="submit">Save</button>
+</form>
+</form>
+</body>
+</html>

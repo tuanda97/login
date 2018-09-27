@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .navbar-default {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-color: #FFF;
+        }
+
+        .navbar-default .navbar-brand {
+            color: #FFF;
+        }
+
+        .navbar-default .navbar-brand:hover {
+            color: #FFB800;
+        }
+
+        .navbar-default .navbar-nav > .active > a {
+            color: #FFF;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            color: #999;
+        }
+
+        .dropdown-menu > li > a,
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus,
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+            color: #FFF;
+        }
+
+        .navbar-default .navbar-nav > .open > a,
+        .navbar-default .navbar-nav > .open > a:hover,
+        .navbar-default .navbar-nav > .open > a:focus {
+            color: #555;
+            background-color: #e7e7e7;
+        }
+
+        .dropdown-menu {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .dropdown-menu > li > a:hover {
+            color: #555!important;
+        }
+
+        @media (max-width:768px){
+            .navbar-default .navbar-nav .open .dropdown-menu> li > a:hover,
+            .dropdown-menu > li > a:hover {
+                color: #FFF!important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Đây là menu mobile</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://congdongit.org">Cộng Đồng IT</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="#">Themes</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plugins<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Plugins 1</a></li>
+                        <li><a href="#">Plugins 2</a></li>
+                        <li><a href="#">Plugins 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tools</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <title>Webslesson Tutorial | Facebook Style Header Notification using PHP Ajax Bootstrap</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form method="post">
+{#{% csrf_token %}#}
+{#{% for data1 in data1 %}#}
+{#{{ data1 }}#}
+{#{% endfor %}#}
+{#        {% if count %} }{{ count }}{% endif %}#}
+{#{% print data1 %}#}
+{#    Email Sent#}
+{#    <input type="email" name="emailsent">#}
+{#    Email To#}
+{#    <input type="email" name="emailto">#}
+{#    Content#}
+{#    <input type="text" name="content">#}
+{#    <button type="submit" name="sent">Sent</button>#}
+<a id="Massagesnew" class="Massagesnew" data-toggle="dropdown" data-placement="" title="newmassages"><i class="fa fa-list">New Massages</i></a>
+<div class="main">
+
+                <h2>Email InBox</h2>
+{#                {% for data in datacontent %}#}
+                <div class="container darker">
+                    <table>
+                        <tr>
+                            <td><a style="width: 300px"><h4>Do Anh Tuan</h4></a></td>
+{#                            <td><img src="{% static '/image/logo/HUST.png' %}" alt="Avatar" class="right" style="width:100%;"></td>#}
+                            <td><a></a></td>
+                            <td>
+                                <p>Subject</p>
+                                <p>Hey! I'm fine. Thanks for asking!</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <span class="time-left">11:01</span>
+                </div>
+{#                {% endfor %}#}
+
+        </div>
+ <div class="modal fade" id="showmassages" style="width: 700px;height:700px;margin-right: auto;margin-left: auto" >
+{#        <div class="modal-dialog">#}
+            <!-- Modal content-->
+            <div class="modal-content" style="margin-left:5px">
+                <div class="modal-header">
+                    <button type="button" class="close" name="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Email</h4>
+                </div>
+                <div class="modal-body">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">Management Email</a>
+                            </div>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-envelope" style="font-size:18px;"></span></a>
+                                    <ul class="dropdown-menu"></ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <br />
+                    <h2 align="center">Embedded Networking Laboratory, Hanoi University of Science and Technology</h2>
+                    <br />
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>Sent To</label>
+                            <input type="text" name="sentto" id="sentto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Subject</label>
+                            <input type="text" name="subject" id="subject" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Comment</label>
+                            <textarea name="comment" id="comment" class="form-control" rows="5"></textarea>
+                        </div>
+                        <div class="form-file">
+                            <a type="file" href="#"><i class="glyphicon glyphicon-paperclip"></i></a>
+                            <a type="file" href="#"><i class="glyphicon glyphicon-picture"></i></a>
+                            <a type="file" href="#"><i class="fa fa-jsfiddle"></i></a>
+                            <a type="file" href="#"><i class="fa fa-jsfiddle"></i></a>
+{#                            <a id="Massages" class="Massages" data-toggle="dropdown" data-placement="" title="tep"><i class="fa fa-list"></i></a>#}
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" name="post" id="post" class="btn btn-info" >post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+{#        </div>#}
+    </div>
+    <script>
+    $(document).ready(function(){
+        $("#Massagesnew").click(function(){
+            $("#showmassages").modal("toggle");
+            });
+        });
+    </script>
+
+</form>
+
+</body>
+</html>
